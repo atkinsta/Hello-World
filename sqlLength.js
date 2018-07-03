@@ -1,9 +1,12 @@
+//After you npm install line-by-line, this program is run by giving it a file and number of columns as arguments
+//Example: node sqlLength.js TopAlbums.csv 8
+
 let LineByLineReader = require("line-by-line"), // npm install line-by-line for this to work.
     lr = new LineByLineReader(process.argv[2]);  // put your file in here, example ("data.csv").
 
 let numCols = parseInt(process.argv[3])
-let maxLength = Array(numCols).fill(0);               // Put the number of columns you need to check in here like Array(num).
-let columnLocator = Array(numCols).fill("");          // Ditto
+let maxLength = Array(numCols).fill(0);               
+let columnLocator = Array(numCols).fill("");   
 
 lr.on("error", function(err){
     throw err;
