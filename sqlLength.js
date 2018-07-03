@@ -2,7 +2,7 @@
 //Example: node sqlLength.js TopAlbums.csv 8
 
 let LineByLineReader = require("line-by-line"), // npm install line-by-line for this to work.
-    lr = new LineByLineReader(process.argv[2]);  // put your file in here, example ("data.csv").
+    lr = new LineByLineReader(process.argv[2]); //Make sure your dataset is in the same folder as this file.
 
 let numCols = parseInt(process.argv[3])
 let maxLength = Array(numCols).fill(0);               
